@@ -1,2 +1,2 @@
-# scientific-journal
-Scientific publications and lecture materials
+# Научный журнал
+Научные публикации и материала 
