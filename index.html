@@ -1,22 +1,22 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Научные публикации, лекции и учебные материалы">
-  <title>Научный журнал</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Научный журнал | КазНУ имени аль-Фараби</title>
+  <meta name="description" content="Научные публикации и учебные материалы кафедры уголовного права, уголовного процесса и криминалистики КазНУ имени аль-Фараби.">
 
   <style>
     :root {
-      --navy: #0b1f45;
-      --deep-blue: #123b78;
-      --blue: #2463b5;
-      --light-blue: #eaf2fc;
-      --pale-blue: #f4f8fe;
-      --white: #ffffff;
-      --text: #172b4d;
-      --muted: #63748b;
-      --border: #d8e3f1;
+      --navy: #17365D;
+      --blue: #244D78;
+      --gold: #B89A5A;
+      --text: #26364A;
+      --muted: #68788B;
+      --border: #DCE4ED;
+      --background: #FFFFFF;
+      --light: #F4F7FB;
     }
 
     * {
@@ -25,318 +25,464 @@
 
     html {
       scroll-behavior: smooth;
+      scroll-padding-top: 24px;
     }
 
     body {
       margin: 0;
-      background: var(--pale-blue);
+      background-color: var(--background);
       color: var(--text);
-      font-family: Arial, sans-serif;
-    }
-
-    header {
-      padding: 30px 22px;
-      background: var(--navy);
-      color: var(--white);
-    }
-
-    .container {
-      max-width: 1080px;
-      margin: 0 auto;
-    }
-
-    .brand {
-      font-family: Georgia, serif;
-      font-size: 23px;
-      font-weight: bold;
-      letter-spacing: 1.5px;
-    }
-
-    .subtitle {
-      margin-top: 9px;
-      color: #c5d8f5;
-      font-size: 13px;
-      line-height: 1.6;
-    }
-
-    nav {
-      padding: 17px 22px;
-      background: var(--white);
-      border-bottom: 1px solid var(--border);
-    }
-
-    nav a {
-      color: var(--deep-blue);
-      font-size: 12px;
-      font-weight: bold;
-      letter-spacing: 1px;
-      text-decoration: none;
-    }
-
-    main {
-      max-width: 1080px;
-      margin: 48px auto;
-      padding: 0 22px;
-    }
-
-    .eyebrow {
-      color: var(--blue);
-      font-size: 11px;
-      font-weight: bold;
-      letter-spacing: 2px;
-    }
-
-    h1 {
-      margin: 15px 0;
-      color: var(--navy);
-      font-family: Georgia, serif;
-      font-size: clamp(32px, 6vw, 49px);
-      font-weight: normal;
-      line-height: 1.2;
-    }
-
-    .intro {
-      max-width: 650px;
-      color: var(--muted);
-      font-size: 15px;
-      line-height: 1.8;
-    }
-
-    .section-heading {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      margin: 45px 0 24px;
-      padding-bottom: 16px;
-      border-bottom: 1px solid var(--border);
-      color: var(--navy);
-      font-family: Georgia, serif;
-      font-size: 27px;
-      font-weight: normal;
-    }
-
-    .section-heading::before {
-      width: 4px;
-      height: 29px;
-      background: var(--blue);
-      content: "";
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 30px 20px;
-    }
-
-    .publication {
-      min-width: 0;
-    }
-
-    .cover {
-      display: flex;
-      aspect-ratio: 4 / 3;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-      border: 1px solid var(--border);
-      background: var(--light-blue);
-      color: var(--deep-blue);
-      text-align: center;
-      font-family: Georgia, serif;
-      font-size: 23px;
-      line-height: 1.5;
-    }
-
-    .cover.second {
-      background: #dce9fb;
-      color: var(--navy);
-    }
-
-    .number {
-      margin-top: 16px;
-      color: var(--blue);
-      font-size: 11px;
-      font-weight: bold;
-      letter-spacing: 1px;
-    }
-
-    .publication h3 {
-      margin: 10px 0;
-      color: var(--navy);
-      font-family: Georgia, serif;
-      font-size: 20px;
-      font-weight: normal;
-      line-height: 1.5;
-    }
-
-    .description {
-      color: var(--muted);
-      font-size: 13px;
+      font-family: Arial, Helvetica, sans-serif;
       line-height: 1.7;
     }
 
-    .pdf {
-      display: inline-block;
-      margin-top: 5px;
-      color: var(--blue);
-      font-size: 13px;
-      font-weight: bold;
-      line-height: 1.8;
-      text-underline-offset: 4px;
-    }
-
-    .pdf:hover {
+    a {
       color: var(--navy);
     }
 
-    footer {
-      margin-top: 65px;
-      padding: 32px 22px;
+    .university-header {
+      background: #FFFFFF;
+      padding: 28px 24px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .header-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .logo {
+      width: 88px;
+      height: 88px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+
+    .university-name {
+      margin: 0;
+      color: var(--navy);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .university-subtitle {
+      margin: 3px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .department {
+      margin: 10px 0 0;
+      color: var(--navy);
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .journal-name {
+      margin: 8px 0 0;
+      color: var(--navy);
+      font-size: 28px;
+      line-height: 1.3;
+      font-weight: 700;
+    }
+
+    .journal-subtitle {
+      margin: 4px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .main-nav {
       background: var(--navy);
-      color: var(--white);
-      text-align: center;
+      border-bottom: 3px solid var(--gold);
+    }
+
+    .nav-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .main-nav a {
+      display: block;
+      padding: 16px 20px;
+      color: #FFFFFF;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s ease;
+    }
+
+    .main-nav a:hover,
+    .main-nav a:focus {
+      background: var(--blue);
+    }
+
+    .container {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .hero {
+      margin: 36px 0 44px;
+      padding: 42px;
+      background: var(--light);
+      border-left: 5px solid var(--gold);
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--muted);
       font-size: 12px;
-      line-height: 1.9;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      margin: 0 0 14px;
+      color: var(--navy);
+      font-size: clamp(27px, 4vw, 38px);
+      line-height: 1.25;
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: 0;
+      font-size: 16px;
+    }
+
+    .section {
+      margin: 0 0 48px;
+      scroll-margin-top: 24px;
+    }
+
+    .section-heading {
+      margin: 0 0 12px;
+      padding-bottom: 12px;
+      color: var(--navy);
+      border-bottom: 2px solid var(--border);
+      font-size: 25px;
+    }
+
+    .section-description {
+      max-width: 850px;
+      color: var(--muted);
+    }
+
+    .material-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+      margin-top: 24px;
+    }
+
+    .material-card {
+      overflow: hidden;
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      transition: box-shadow 0.2s ease, transform 0.2s ease;
+    }
+
+    .material-card:hover {
+      box-shadow: 0 8px 24px rgba(23, 54, 93, 0.09);
+      transform: translateY(-3px);
+    }
+
+    .card-top {
+      min-height: 110px;
+      padding: 24px;
+      background: var(--light);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .document-icon {
+      color: var(--navy);
+      font-size: 42px;
+      font-weight: 700;
+    }
+
+    .card-body {
+      padding: 22px;
+    }
+
+    .card-category {
+      margin: 0 0 8px;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+    }
+
+    .card-body h3 {
+      margin: 0 0 12px;
+      color: var(--navy);
+      font-size: 18px;
+      line-height: 1.45;
+    }
+
+    .card-body p {
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .document-link {
+      display: inline-block;
+      padding: 9px 14px;
+      border: 1px solid var(--navy);
+      border-radius: 3px;
+      color: var(--navy);
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .document-link:hover {
+      background: var(--navy);
+      color: #FFFFFF;
+    }
+
+    .info-panel {
+      padding: 28px;
+      background: var(--light);
+      border: 1px solid var(--border);
+    }
+
+    .info-panel p {
+      margin: 0 0 12px;
+    }
+
+    .info-panel p:last-child {
+      margin-bottom: 0;
+    }
+
+    footer {
+      margin-top: 60px;
+      padding: 28px 20px;
+      background: var(--navy);
+      color: #FFFFFF;
+      text-align: center;
+      font-size: 13px;
     }
 
     footer p {
       margin: 5px 0;
-      color: #c5d8f5;
     }
 
-    @media (min-width: 720px) {
-      .grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 34px 26px;
-      }
-    }
-
-    @media (max-width: 420px) {
-      header {
-        padding: 24px 17px;
+    @media (max-width: 760px) {
+      .university-header {
+        padding: 22px 16px;
       }
 
-      main {
-        margin-top: 34px;
-        padding: 0 17px;
+      .header-inner {
+        align-items: flex-start;
+        gap: 14px;
       }
 
-      .grid {
-        gap: 25px 13px;
+      .logo {
+        width: 62px;
+        height: 62px;
       }
 
-      .cover {
-        padding: 10px;
-        font-size: 18px;
+      .university-name {
+        font-size: 11px;
       }
 
-      .publication h3 {
-        font-size: 17px;
+      .university-subtitle,
+      .department {
+        font-size: 12px;
+      }
+
+      .journal-name {
+        font-size: 23px;
+      }
+
+      .nav-inner {
+        justify-content: flex-start;
+      }
+
+      .main-nav a {
+        padding: 12px 14px;
+        font-size: 13px;
+      }
+
+      .container {
+        width: calc(100% - 30px);
+      }
+
+      .hero {
+        margin-top: 24px;
+        padding: 25px 22px;
+      }
+
+      .material-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-heading {
+        font-size: 22px;
       }
     }
   </style>
 </head>
 
 <body>
-  <header>
-   <div class="brand" style="display: flex; align-items: center; gap: 18px; color: #17365D;">
-  <img src="./logonew1.png"
-       alt="Логотип КазНУ имени аль-Фараби"
-       style="height: 76px; width: auto; object-fit: contain; flex-shrink: 0;">
+  <header class="university-header">
+    <div class="header-inner">
+      <img class="logo"
+           src="./logonew1.png"
+           alt="Логотип КазНУ имени аль-Фараби">
 
-  <div style="color: #17365D; line-height: 1.4;">
-    <div style="font-size: 12px; font-weight: 700; letter-spacing: 0.6px;">
-      КАЗАХСКИЙ НАЦИОНАЛЬНЫЙ УНИВЕРСИТЕТ
+      <div>
+        <p class="university-name">Казахский национальный университет</p>
+        <p class="university-subtitle">имени аль-Фараби</p>
+        <p class="department">
+          Кафедра уголовного права,<br>
+          уголовного процесса и криминалистики
+        </p>
+        <p class="journal-name">Научный журнал</p>
+        <p class="journal-subtitle">Научные публикации и учебные материалы</p>
+      </div>
     </div>
-    <div style="font-size: 13px; margin-top: 2px;">
-      имени аль-Фараби
-    </div>
-    <div style="font-size: 14px; font-weight: 600; margin-top: 8px;">
-      Кафедра уголовного права,<br>
-      уголовного процесса и криминалистики
-    </div>
-    <div style="font-size: 21px; font-weight: 700; margin-top: 8px;">
-      Научный журнал
-    </div>
-    <div style="font-size: 12px; margin-top: 3px; color: #52657D;">
-      Научные публикации и учебные материалы
-        
-    </div>
-  </div>
-</div>
-  </header> 
-<nav style="background-color: #17365D; padding: 0 24px; display: flex; flex-wrap: wrap; justify-content: center; gap: 0;">
-  <a href="#home" style="display: block; padding: 18px 22px; color: white; text-decoration: none; font-weight: 600;">Главная</a>
-  <a href="#publications" style="display: block; padding: 18px 22px; color: white; text-decoration: none; font-weight: 600;">Публикации</a>
-  <a href="#materials" style="display: block; padding: 18px 22px; color: white; text-decoration: none; font-weight: 600;">Учебные материалы</a>
-  <a href="#about" style="display: block; padding: 18px 22px; color: white; text-decoration: none; font-weight: 600;">О журнале</a>
-  <a href="#contacts" style="display: block; padding: 18px 22px; color: white; text-decoration: none; font-weight: 600;">Контакты</a>
-  <nav>
-    <div class="container">
-      <a href="#">ГЛАВНАЯ</a>
-      &nbsp; / &nbsp;
-      <a href="#publications">НАУЧНЫЕ ПУБЛИКАЦИИ</a>
+  </header>
+
+  <nav class="main-nav" aria-label="Главное меню">
+    <div class="nav-inner">
+      <a href="#home">Главная</a>
+      <a href="#publications">Публикации</a>
+      <a href="#materials">Учебные материалы</a>
+      <a href="#about">О журнале</a>
+      <a href="#contacts">Контакты</a>
     </div>
   </nav>
 
-  <main>
-    <div class="eyebrow">ЭЛЕКТРОННАЯ НАУЧНАЯ БИБЛИОТЕКА</div>
+  <main class="container">
+    <section class="hero" id="home">
+      <p class="eyebrow">Научно-образовательный ресурс</p>
+      <h1>Научные исследования и учебные материалы</h1>
+      <p>
+        Электронная площадка для размещения научных публикаций,
+        учебных материалов и исследований в области уголовного права,
+        уголовного процесса и криминалистики.
+      </p>
+    </section>
 
-    <h1>Научные материалы</h1>
+    <section class="section" id="publications">
+      <h2 class="section-heading">Научные публикации</h2>
+      <p class="section-description">
+        В этом разделе размещаются научные статьи и исследования
+        по актуальным вопросам юриспруденции.
+      </p>
+      <div class="material-grid">
+        <article class="material-card">
+          <div class="card-top">
+            <span class="document-icon">01</span>
+          </div>
+          <div class="card-body">
+            <p class="card-category">Научные исследования</p>
+            <h3>Научные статьи по юриспруденции</h3>
+            <p>Раздел для будущих публикаций авторов.</p>
+          </div>
+        </article>
+        <article class="material-card">
+          <div class="card-top">
+            <span class="document-icon">02</span>
+          </div>
+          <div class="card-body">
+            <p class="card-category">Аналитические материалы</p>
+            <h3>Актуальные вопросы права</h3>
+            <p>Исследования и анализ правоприменительной практики.</p>
+          </div>
+        </article>
+      </div>
+    </section>
 
-    <p class="intro">
-      Добро пожаловать в электронную библиотеку научных
-      публикаций, лекций и учебных материалов.
-      Выберите интересующую публикацию, чтобы ознакомиться
-      с её содержанием в формате PDF.
-    </p>
+    <section class="section" id="materials">
+      <h2 class="section-heading">Учебные материалы</h2>
+      <p class="section-description">
+        Лекции, учебники и методические материалы. Здесь будут размещены
+        реальные документы PDF, которые посетители смогут открыть.
+      </p>
 
-    <h2 class="section-heading" id="publications">
-      Научные публикации
-    </h2>
+      <div class="material-grid">
+        <article class="material-card">
+          <div class="card-top">
+            <span class="document-icon">PDF</span>
+          </div>
+          <div class="card-body">
+            <p class="card-category">Учебные материалы</p>
+            <h3>Материал № 1</h3>
+            <p>Здесь будет название лекции или учебника.</p>
+            <span class="document-link">PDF ещё не добавлен</span>
+          </div>
+        </article>
 
-    <section class="grid">
-      <article class="publication">
-        <div class="cover">
-          уголовное<br>право
-        </div>
+        <article class="material-card">
+          <div class="card-top">
+            <span class="document-icon">PDF</span>
+          </div>
+          <div class="card-body">
+            <p class="card-category">Учебные материалы</p>
+            <h3>Материал № 2</h3>
+            <p>Здесь будет название следующего учебного материала.</p>
+            <span class="document-link">PDF ещё не добавлен</span>
+          </div>
+        </article>
 
-        <div class="number">ПУБЛИКАЦИЯ № 01</div>
+        <article class="material-card">
+          <div class="card-top">
+            <span class="document-icon">PDF</span>
+          </div>
+          <div class="card-body">
+            <p class="card-category">Учебные материалы</p>
+            <h3>Материал № 3</h3>
+            <p>Здесь будет название ещё одного материала.</p>
+            <span class="document-link">PDF ещё не добавлен</span>
+          </div>
+        </article>
+      </div>
+    </section>
 
-        <h3>Основы Криминалистики</h3>
-
-        <p class="description">
-          Учебная лекция и материалы для изучения.
+    <section class="section" id="about">
+      <h2 class="section-heading">О журнале</h2>
+      <div class="info-panel">
+        <p>
+          Научный журнал предназначен для представления научных
+          исследований и учебных материалов в области юриспруденции.
         </p>
-
-        <a class="pdf" href="PDF-1.pdf" target="_blank">
-          Читать материал (PDF) ↗
-        </a>
-      </article>
-
-      <article class="publication">
-        <div class="cover second">
-          Юридическая<br>наука
-        </div>
-
-        <div class="number">ПУБЛИКАЦИЯ № 02</div>
-
-        <h3>Основы юриспруденции</h3>
-
-        <p class="description">
-          Научные и учебные материалы.
+        <p>
+          Тематические направления: уголовное право, уголовный процесс
+          и криминалистика.
         </p>
+      </div>
+    </section>
 
-        <a class="pdf" href="PDF-2.pdf" target="_blank">
-          Читать материал (PDF) ↗
-        </a>
-      </article>
+    <section class="section" id="contacts">
+      <h2 class="section-heading">Контакты</h2>
+      <div class="info-panel">
+        <p><strong>Казахский национальный университет имени аль-Фараби</strong></p>
+        <p>Кафедра уголовного права, уголовного процесса и криминалистики</p>
+      </div>
     </section>
   </main>
 
   <footer>
-    <strong>НАУЧНЫЙ ЖУРНАЛ</strong>
-    <p>Электронные научные и учебные материалы</p>
+    <p>Казахский национальный университет имени аль-Фараби</p>
+    <p>Кафедра уголовного права, уголовного процесса и криминалистики</p>
+    <p>Научный журнал</p>
   </footer>
 </body>
 </html>
