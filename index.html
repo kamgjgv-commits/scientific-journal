@@ -2,487 +2,622 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Научный журнал | КазНУ имени аль-Фараби</title>
-  <meta name="description" content="Научные публикации и учебные материалы кафедры уголовного права, уголовного процесса и криминалистики КазНУ имени аль-Фараби.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Научный журнал — КазНУ имени аль-Фараби</title>
 
-  <style>
-    :root {
-      --navy: #17365D;
-      --blue: #244D78;
-      --gold: #B89A5A;
-      --text: #26364A;
-      --muted: #68788B;
-      --border: #DCE4ED;
-      --background: #FFFFFF;
-      --light: #F4F7FB;
-    }
+<style>
+:root {
+  --navy: #123765;
+  --blue: #24558a;
+  --gold: #c5a45e;
+  --text: #26384d;
+  --muted: #687b91;
+  --line: #dce5ef;
+  --pale: #f2f6fb;
+}
 
-    * {
-      box-sizing: border-box;
-    }
+* { box-sizing: border-box; }
 
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 24px;
-    }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 20px;
+}
 
-    body {
-      margin: 0;
-      background-color: var(--background);
-      color: var(--text);
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.7;
-    }
+body {
+  margin: 0;
+  background: #fff;
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.55;
+}
 
-    a {
-      color: var(--navy);
-    }
+.container {
+  width: min(1050px, calc(100% - 36px));
+  margin: 0 auto;
+}
 
-    .university-header {
-      background: #FFFFFF;
-      padding: 28px 24px;
-      border-bottom: 1px solid var(--border);
-    }
+/* Шапка университета */
+.header {
+  background: #fff;
+  border-bottom: 1px solid var(--line);
+}
 
-    .header-inner {
-      max-width: 1180px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      gap: 24px;
-    }
+.header-inner {
+  width: min(1050px, calc(100% - 36px));
+  min-height: 105px;
+  margin: 0 auto;
+  padding: 13px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
 
-    .logo {
-      width: 88px;
-      height: 88px;
-      object-fit: contain;
-      flex-shrink: 0;
-    }
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  min-width: 0;
+}
 
-    .university-name {
-      margin: 0;
-      color: var(--navy);
-      font-size: 14px;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-    }
+.logo {
+  width: 66px;
+  height: 78px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
 
-    .university-subtitle {
-      margin: 3px 0 0;
-      color: var(--muted);
-      font-size: 14px;
-    }
+.university {
+  margin: 0;
+  color: var(--navy);
+  font-size: 11px;
+  line-height: 1.4;
+  font-weight: 700;
+  text-transform: uppercase;
+}
 
-    .department {
-      margin: 10px 0 0;
-      color: var(--navy);
-      font-size: 14px;
-      font-weight: 600;
-    }
+.department {
+  margin: 3px 0;
+  color: var(--navy);
+  font-size: 11px;
+  line-height: 1.4;
+  font-weight: 600;
+}
 
-    .journal-name {
-      margin: 8px 0 0;
-      color: var(--navy);
-      font-size: 28px;
-      line-height: 1.3;
-      font-weight: 700;
-    }
+.journal-title {
+  margin: 4px 0 0;
+  color: var(--navy);
+  font-family: Georgia, serif;
+  font-size: 22px;
+  line-height: 1.2;
+}
 
-    .journal-subtitle {
-      margin: 4px 0 0;
-      color: var(--muted);
-      font-size: 13px;
-    }
+.tagline {
+  margin: 2px 0 0;
+  color: var(--muted);
+  font-size: 10px;
+}
 
-    .main-nav {
-      background: var(--navy);
-      border-bottom: 3px solid var(--gold);
-    }
+.search {
+  display: flex;
+  flex-shrink: 0;
+  width: 220px;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  overflow: hidden;
+}
 
-    .nav-inner {
-      max-width: 1180px;
-      margin: 0 auto;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-    }
+.search input {
+  width: 100%;
+  min-width: 0;
+  padding: 10px;
+  border: 0;
+  outline: none;
+  font-size: 12px;
+}
 
-    .main-nav a {
-      display: block;
-      padding: 16px 20px;
-      color: #FFFFFF;
-      font-size: 14px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: background 0.2s ease;
-    }
+.search button {
+  padding: 0 12px;
+  border: 0;
+  background: #fff;
+  color: var(--blue);
+  cursor: pointer;
+  font-size: 17px;
+}
 
-    .main-nav a:hover,
-    .main-nav a:focus {
-      background: var(--blue);
-    }
+/* Главное меню */
+.nav {
+  background: var(--navy);
+  border-bottom: 3px solid var(--gold);
+}
 
-    .container {
-      width: min(1180px, calc(100% - 40px));
-      margin: 0 auto;
-    }
+.nav-inner {
+  width: min(1050px, calc(100% - 36px));
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
 
-    .hero {
-      margin: 36px 0 44px;
-      padding: 42px;
-      background: var(--light);
-      border-left: 5px solid var(--gold);
-    }
+.nav a {
+  display: block;
+  padding: 12px 19px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
+}
 
-    .eyebrow {
-      margin: 0 0 10px;
-      color: var(--muted);
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 1.2px;
-      text-transform: uppercase;
-    }
+.nav a:hover,
+.nav a:focus {
+  background: var(--blue);
+}
 
-    .hero h1 {
-      margin: 0 0 14px;
-      color: var(--navy);
-      font-size: clamp(27px, 4vw, 38px);
-      line-height: 1.25;
-    }
+/* Фото главного корпуса */
+.hero {
+  min-height: 250px;
+  display: flex;
+  align-items: center;
+  background-color: #eaf1f8;
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(244,248,253,.98) 0%,
+      rgba(244,248,253,.91) 36%,
+      rgba(244,248,253,.48) 54%,
+      rgba(244,248,253,.04) 100%
+    ),
+    url("./kaznu-building.jpg");
+  background-position: center, center 48%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
-    .hero p {
-      max-width: 760px;
-      margin: 0;
-      font-size: 16px;
-    }
+.hero-content {
+  padding-top: 28px;
+  padding-bottom: 28px;
+}
 
-    .section {
-      margin: 0 0 48px;
-      scroll-margin-top: 24px;
-    }
+.eyebrow {
+  margin: 0 0 8px;
+  color: var(--blue);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
 
-    .section-heading {
-      margin: 0 0 12px;
-      padding-bottom: 12px;
-      color: var(--navy);
-      border-bottom: 2px solid var(--border);
-      font-size: 25px;
-    }
+.hero h1 {
+  max-width: 500px;
+  margin: 0 0 10px;
+  color: var(--navy);
+  font-family: Georgia, serif;
+  font-size: clamp(27px, 3.5vw, 34px);
+  line-height: 1.18;
+}
 
-    .section-description {
-      max-width: 850px;
-      color: var(--muted);
-    }
+.hero p {
+  max-width: 490px;
+  margin: 0 0 16px;
+  font-size: 13px;
+}
 
-    .material-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 22px;
-      margin-top: 24px;
-    }
+.button {
+  display: inline-block;
+  padding: 9px 15px;
+  border-radius: 4px;
+  background: var(--navy);
+  color: #fff;
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 700;
+}
 
-    .material-card {
-      overflow: hidden;
-      background: #FFFFFF;
-      border: 1px solid var(--border);
-      border-radius: 5px;
-      transition: box-shadow 0.2s ease, transform 0.2s ease;
-    }
+.button:hover { background: var(--blue); }
 
-    .material-card:hover {
-      box-shadow: 0 8px 24px rgba(23, 54, 93, 0.09);
-      transform: translateY(-3px);
-    }
+/* Основные разделы */
+main { padding-top: 25px; }
 
-    .card-top {
-      min-height: 110px;
-      padding: 24px;
-      background: var(--light);
-      border-bottom: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+.section {
+  margin-bottom: 28px;
+  scroll-margin-top: 20px;
+}
 
-    .document-icon {
-      color: var(--navy);
-      font-size: 42px;
-      font-weight: 700;
-    }
+.section-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 5px;
+}
 
-    .card-body {
-      padding: 22px;
-    }
+.section h2 {
+  margin: 0;
+  color: var(--navy);
+  font-family: Georgia, serif;
+  font-size: 22px;
+}
 
-    .card-category {
-      margin: 0 0 8px;
-      color: var(--muted);
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.8px;
-      text-transform: uppercase;
-    }
+.description {
+  margin: 4px 0 14px;
+  color: var(--muted);
+  font-size: 12px;
+}
 
-    .card-body h3 {
-      margin: 0 0 12px;
-      color: var(--navy);
-      font-size: 18px;
-      line-height: 1.45;
-    }
+.all-link {
+  color: var(--blue);
+  font-size: 11px;
+  font-weight: 700;
+  text-decoration: none;
+}
 
-    .card-body p {
-      margin: 0 0 18px;
-      color: var(--muted);
-      font-size: 14px;
-    }
+/* Карточки публикаций */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 17px;
+}
 
-    .document-link {
-      display: inline-block;
-      padding: 9px 14px;
-      border: 1px solid var(--navy);
-      border-radius: 3px;
-      color: var(--navy);
-      font-size: 13px;
-      font-weight: 700;
-      text-decoration: none;
-    }
+.card {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(18,55,101,.04);
+}
 
-    .document-link:hover {
-      background: var(--navy);
-      color: #FFFFFF;
-    }
+.card-photo {
+  display: block;
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  background: var(--pale);
+}
 
-    .info-panel {
-      padding: 28px;
-      background: var(--light);
-      border: 1px solid var(--border);
-    }
+.card-body { padding: 12px; }
 
-    .info-panel p {
-      margin: 0 0 12px;
-    }
+.label {
+  display: inline-block;
+  margin-bottom: 6px;
+  color: var(--blue);
+  font-size: 10px;
+  font-weight: 700;
+}
 
-    .info-panel p:last-child {
-      margin-bottom: 0;
-    }
+.card h3 {
+  margin: 0 0 7px;
+  color: var(--navy);
+  font-family: Georgia, serif;
+  font-size: 14px;
+  line-height: 1.35;
+}
 
-    footer {
-      margin-top: 60px;
-      padding: 28px 20px;
-      background: var(--navy);
-      color: #FFFFFF;
-      text-align: center;
-      font-size: 13px;
-    }
+.card p {
+  margin: 0 0 12px;
+  color: var(--muted);
+  font-size: 11px;
+}
 
-    footer p {
-      margin: 5px 0;
-    }
+.card-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 7px;
+  color: var(--muted);
+  font-size: 10px;
+}
 
-    @media (max-width: 760px) {
-      .university-header {
-        padding: 22px 16px;
-      }
+.small-button {
+  display: inline-block;
+  padding: 5px 8px;
+  border: 1px solid #8aa4c4;
+  border-radius: 4px;
+  color: var(--navy);
+  text-decoration: none;
+  font-size: 10px;
+  font-weight: 700;
+}
 
-      .header-inner {
-        align-items: flex-start;
-        gap: 14px;
-      }
+.small-button:hover {
+  background: var(--navy);
+  color: #fff;
+}
 
-      .logo {
-        width: 62px;
-        height: 62px;
-      }
+/* Учебные материалы */
+.study-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  background: #fff;
+}
 
-      .university-name {
-        font-size: 11px;
-      }
+.book-cover {
+  width: 72px;
+  height: 96px;
+  flex-shrink: 0;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+}
 
-      .university-subtitle,
-      .department {
-        font-size: 12px;
-      }
+.study-info { min-width: 0; }
 
-      .journal-name {
-        font-size: 23px;
-      }
+.study-info h3 {
+  margin: 2px 0 6px;
+  color: var(--navy);
+  font-family: Georgia, serif;
+  font-size: 13px;
+  line-height: 1.35;
+}
 
-      .nav-inner {
-        justify-content: flex-start;
-      }
+.study-info p {
+  margin: 0 0 10px;
+  color: var(--muted);
+  font-size: 11px;
+}
 
-      .main-nav a {
-        padding: 12px 14px;
-        font-size: 13px;
-      }
+/* О журнале и контакты */
+.info-band {
+  padding: 22px 0;
+  background: var(--pale);
+  border-top: 1px solid var(--line);
+}
 
-      .container {
-        width: calc(100% - 30px);
-      }
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px;
+}
 
-      .hero {
-        margin-top: 24px;
-        padding: 25px 22px;
-      }
+.info-grid h3 {
+  margin: 0 0 7px;
+  color: var(--navy);
+  font-size: 14px;
+}
 
-      .material-grid {
-        grid-template-columns: 1fr;
-      }
+.info-grid p {
+  margin: 0 0 5px;
+  color: var(--muted);
+  font-size: 11px;
+}
 
-      .section-heading {
-        font-size: 22px;
-      }
-    }
-  </style>
+footer {
+  padding: 18px;
+  background: var(--navy);
+  color: #fff;
+  text-align: center;
+  font-size: 10px;
+}
+
+/* Поиск */
+.no-results {
+  display: none;
+  margin: 15px 0;
+  color: var(--muted);
+}
+
+@media (max-width: 760px) {
+  .header-inner {
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 12px 0;
+  }
+
+  .logo {
+    width: 52px;
+    height: 62px;
+  }
+
+  .university { font-size: 9px; }
+  .department { font-size: 10px; }
+  .journal-title { font-size: 19px; }
+  .tagline { font-size: 9px; }
+
+  .search { width: 100%; }
+
+  .nav-inner { justify-content: center; }
+  .nav a { padding: 10px 11px; font-size: 11px; }
+
+  .hero {
+    min-height: 250px;
+    background-position: center, 60% center;
+  }
+
+  .hero h1 { font-size: 27px; }
+
+  .grid { grid-template-columns: 1fr; gap: 13px; }
+  .card-photo { height: 150px; }
+
+  .section h2 { font-size: 20px; }
+  .info-grid { grid-template-columns: 1fr; gap: 20px; }
+}
+</style>
 </head>
 
 <body>
-  <header class="university-header">
-    <div class="header-inner">
-      <img class="logo"
-           src="./logonew1.png"
-           alt="Логотип КазНУ имени аль-Фараби">
 
+<header class="header">
+  <div class="header-inner">
+    <div class="brand">
+      <img class="logo" src="./logonew1.png" alt="Логотип КазНУ имени аль-Фараби">
       <div>
-        <p class="university-name">Казахский национальный университет</p>
-        <p class="university-subtitle">имени аль-Фараби</p>
-        <p class="department">
-          Кафедра уголовного права,<br>
-          уголовного процесса и криминалистики
-        </p>
-        <p class="journal-name">Научный журнал</p>
-        <p class="journal-subtitle">Научные публикации и учебные материалы</p>
+        <p class="university">Казахский национальный университет имени аль-Фараби</p>
+        <p class="department">Кафедра уголовного права,<br>уголовного процесса и криминалистики</p>
+        <h1 class="journal-title">Научный журнал</h1>
+        <p class="tagline">Научные публикации и учебные материалы</p>
       </div>
     </div>
-  </header>
 
-  <nav class="main-nav" aria-label="Главное меню">
-    <div class="nav-inner">
-      <a href="#home">Главная</a>
-      <a href="#publications">Публикации</a>
-      <a href="#materials">Учебные материалы</a>
-      <a href="#about">О журнале</a>
-      <a href="#contacts">Контакты</a>
+    <form class="search" id="siteSearch" role="search">
+      <input id="searchInput" type="search" placeholder="Поиск по сайту..." aria-label="Поиск по сайту">
+      <button type="submit" aria-label="Найти">⌕</button>
+    </form>
+  </div>
+</header>
+
+<nav class="nav" aria-label="Главное меню">
+  <div class="nav-inner">
+    <a href="#home">Главная</a>
+    <a href="#publications">Публикации</a>
+    <a href="#materials">Учебные материалы</a>
+    <a href="#about">О журнале</a>
+    <a href="#contacts">Контакты</a>
+  </div>
+</nav>
+
+<section class="hero" id="home">
+  <div class="container hero-content">
+    <p class="eyebrow">Научно-образовательный ресурс</p>
+    <h1>Научные исследования<br>и учебные материалы</h1>
+    <p>Электронная площадка для размещения научных публикаций, лекций и учебных материалов в области уголовного права, уголовного процесса и криминалистики.</p>
+    <a class="button" href="#publications">Перейти к публикациям →</a>
+  </div>
+</section>
+
+<main class="container">
+
+  <section class="section" id="publications">
+    <div class="section-head">
+      <h2>Научные публикации</h2>
+      <a class="all-link" href="#publications">Все публикации →</a>
     </div>
-  </nav>
+    <p class="description">Научные статьи и исследования по актуальным вопросам юриспруденции.</p>
 
-  <main class="container">
-    <section class="hero" id="home">
-      <p class="eyebrow">Научно-образовательный ресурс</p>
-      <h1>Научные исследования и учебные материалы</h1>
-      <p>
-        Электронная площадка для размещения научных публикаций,
-        учебных материалов и исследований в области уголовного права,
-        уголовного процесса и криминалистики.
-      </p>
+    <div class="grid searchable">
+      <article class="card">
+        <img class="card-photo" src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=800&q=80" alt="Юридические книги и молоток судьи">
+        <div class="card-body">
+          <span class="label">Статья</span>
+          <h3>Современные проблемы уголовного права</h3>
+          <p>Анализ актуальных тенденций уголовного законодательства.</p>
+          <div class="card-bottom"><span>Научная публикация</span><a class="small-button" href="#contacts">Подробнее →</a></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <img class="card-photo" src="https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&w=800&q=80" alt="Весы правосудия и юридические книги">
+        <div class="card-body">
+          <span class="label">Исследование</span>
+          <h3>Вопросы квалификации преступлений</h3>
+          <p>Сравнительно-правовой анализ законодательства.</p>
+          <div class="card-bottom"><span>Исследование</span><a class="small-button" href="#contacts">Подробнее →</a></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <img class="card-photo" src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=800&q=80" alt="Рабочий стол исследователя">
+        <div class="card-body">
+          <span class="label">Аналитика</span>
+          <h3>Роль криминалистики в расследовании</h3>
+          <p>Методики и современные подходы к расследованию преступлений.</p>
+          <div class="card-bottom"><span>Аналитический материал</span><a class="small-button" href="#contacts">Подробнее →</a></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" id="materials">
+    <div class="section-head">
+      <h2>Учебные материалы</h2>
+      <a class="all-link" href="#materials">Все материалы →</a>
+    </div>
+    <p class="description">Лекции, учебники и методические материалы в формате PDF.</p>
+
+    <div class="grid searchable">
+      <article class="study-card">
+        <img class="book-cover" src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=300&q=80" alt="Учебная книга">
+        <div class="study-info">
+          <span class="label">Учебный материал</span>
+          <h3>Уголовное право. Общая часть</h3>
+          <p>Лекции и основные понятия уголовного права.</p>
+          <span class="small-button">PDF ещё не добавлен</span>
+        </div>
+      </article>
+
+      <article class="study-card">
+        <img class="book-cover" src="https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&w=300&q=80" alt="Учебник">
+        <div class="study-info">
+          <span class="label">Учебный материал</span>
+          <h3>Уголовный процесс</h3>
+          <p>Основные понятия и стадии уголовного процесса.</p>
+          <span class="small-button">PDF ещё не добавлен</span>
+        </div>
+      </article>
+
+      <article class="study-card">
+        <img class="book-cover" src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=300&q=80" alt="Учебные книги">
+        <div class="study-info">
+          <span class="label">Учебный материал</span>
+          <h3>Криминалистика</h3>
+          <p>Материалы для изучения криминалистики.</p>
+          <span class="small-button">PDF ещё не добавлен</span>
+        </div>
+      </article>
+    </div>
+    <p class="no-results" id="noResults">По вашему запросу ничего не найдено.</p>
+  </section>
+
+</main>
+
+<section class="info-band">
+  <div class="container info-grid">
+    <section id="about">
+      <h3>О журнале</h3>
+      <p>Научный журнал предназначен для размещения научных исследований и учебных материалов в области юриспруденции.</p>
+      <p>Тематические направления: уголовное право, уголовный процесс и криминалистика.</p>
     </section>
 
-    <section class="section" id="publications">
-      <h2 class="section-heading">Научные публикации</h2>
-      <p class="section-description">
-        В этом разделе размещаются научные статьи и исследования
-        по актуальным вопросам юриспруденции.
-      </p>
-      <div class="material-grid">
-        <article class="material-card">
-          <div class="card-top">
-            <span class="document-icon">01</span>
-          </div>
-          <div class="card-body">
-            <p class="card-category">Научные исследования</p>
-            <h3>Научные статьи по юриспруденции</h3>
-            <p>Раздел для будущих публикаций авторов.</p>
-          </div>
-        </article>
-        <article class="material-card">
-          <div class="card-top">
-            <span class="document-icon">02</span>
-          </div>
-          <div class="card-body">
-            <p class="card-category">Аналитические материалы</p>
-            <h3>Актуальные вопросы права</h3>
-            <p>Исследования и анализ правоприменительной практики.</p>
-          </div>
-        </article>
-      </div>
+    <section id="contacts">
+      <h3>Контакты</h3>
+      <p>Казахский национальный университет имени аль-Фараби</p>
+      <p>Кафедра уголовного права, уголовного процесса и криминалистики</p>
+      <p>г. Алматы, пр. аль-Фараби, 71</p>
     </section>
+  </div>
+</section>
 
-    <section class="section" id="materials">
-      <h2 class="section-heading">Учебные материалы</h2>
-      <p class="section-description">
-        Лекции, учебники и методические материалы. Здесь будут размещены
-        реальные документы PDF, которые посетители смогут открыть.
-      </p>
+<footer>
+  Казахский национальный университет имени аль-Фараби · Научный журнал
+</footer>
 
-      <div class="material-grid">
-        <article class="material-card">
-          <div class="card-top">
-            <span class="document-icon">PDF</span>
-          </div>
-          <div class="card-body">
-            <p class="card-category">Учебные материалы</p>
-            <h3>Материал № 1</h3>
-            <p>Здесь будет название лекции или учебника.</p>
-            <span class="document-link">PDF ещё не добавлен</span>
-          </div>
-        </article>
+<script>
+const searchForm = document.getElementById("siteSearch");
+const searchInput = document.getElementById("searchInput");
+const cards = document.querySelectorAll(".card, .study-card");
+const noResults = document.getElementById("noResults");
 
-        <article class="material-card">
-          <div class="card-top">
-            <span class="document-icon">PDF</span>
-          </div>
-          <div class="card-body">
-            <p class="card-category">Учебные материалы</p>
-            <h3>Материал № 2</h3>
-            <p>Здесь будет название следующего учебного материала.</p>
-            <span class="document-link">PDF ещё не добавлен</span>
-          </div>
-        </article>
+searchForm.addEventListener("submit", function(event) {
+  event.preventDefault();
+  const query = searchInput.value.trim().toLocaleLowerCase("ru");
+  let matches = 0;
 
-        <article class="material-card">
-          <div class="card-top">
-            <span class="document-icon">PDF</span>
-          </div>
-          <div class="card-body">
-            <p class="card-category">Учебные материалы</p>
-            <h3>Материал № 3</h3>
-            <p>Здесь будет название ещё одного материала.</p>
-            <span class="document-link">PDF ещё не добавлен</span>
-          </div>
-        </article>
-      </div>
-    </section>
+  cards.forEach(function(card) {
+    const found = card.textContent.toLocaleLowerCase("ru").includes(query);
+    card.style.display = found ? "" : "none";
+    if (found) matches++;
+  });
 
-    <section class="section" id="about">
-      <h2 class="section-heading">О журнале</h2>
-      <div class="info-panel">
-        <p>
-          Научный журнал предназначен для представления научных
-          исследований и учебных материалов в области юриспруденции.
-        </p>
-        <p>
-          Тематические направления: уголовное право, уголовный процесс
-          и криминалистика.
-        </p>
-      </div>
-    </section>
+  noResults.style.display = matches === 0 ? "block" : "none";
 
-    <section class="section" id="contacts">
-      <h2 class="section-heading">Контакты</h2>
-      <div class="info-panel">
-        <p><strong>Казахский национальный университет имени аль-Фараби</strong></p>
-        <p>Кафедра уголовного права, уголовного процесса и криминалистики</p>
-      </div>
-    </section>
-  </main>
+  if (query && matches > 0) {
+    document.getElementById("publications").scrollIntoView({behavior:"smooth"});
+  }
+});
 
-  <footer>
-    <p>Казахский национальный университет имени аль-Фараби</p>
-    <p>Кафедра уголовного права, уголовного процесса и криминалистики</p>
-    <p>Научный журнал</p>
-  </footer>
+searchInput.addEventListener("input", function() {
+  if (searchInput.value.trim() === "") {
+    cards.forEach(function(card) { card.style.display = ""; });
+    noResults.style.display = "none";
+  }
+});
+</script>
+
 </body>
 </html>
